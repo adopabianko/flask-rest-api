@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "cbed2932-dcae-4446-925c-e21eee780e8f",
+		"name": "Python User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "c87a0e2f-4be3-4258-accb-0ebad60d3122",
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "Admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "13b90156-2faa-4ece-a7de-149cda167e4a",
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJiNDkwNzIwZC02YTcyLTRiYWUtYmI1NS05ZDA2MjI0YzEyYjAiLCJleHAiOjE1MzQxNDUxNzN9.p2x_VCyZXFOM3MLFCa-ncEjEpXbC3tY4rl99RZQX6DA"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Ado\",\n\t\"password\": \"12345\",\n\t\"admin\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "d88e86d7-6167-4d3c-a54f-db46ff308e4c",
+			"name": "Promote User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJiNDkwNzIwZC02YTcyLTRiYWUtYmI1NS05ZDA2MjI0YzEyYjAiLCJleHAiOjE1MzQxNDUxNzN9.p2x_VCyZXFOM3MLFCa-ncEjEpXbC3tY4rl99RZQX6DA"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Ado\",\n\t\"password\": \"12345\",\n\t\"admin\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/67c2fa0f-919e-46bb-beec-ded4c332a164",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"67c2fa0f-919e-46bb-beec-ded4c332a164"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "e61ed82b-5730-44a0-bf37-dd0b75c48727",
+			"name": "All User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJiNDkwNzIwZC02YTcyLTRiYWUtYmI1NS05ZDA2MjI0YzEyYjAiLCJleHAiOjE1MzQxNDUxNzN9.p2x_VCyZXFOM3MLFCa-ncEjEpXbC3tY4rl99RZQX6DA"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "82248547-2db4-4285-9212-0252ac1174a5",
+			"name": "User by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJiNDkwNzIwZC02YTcyLTRiYWUtYmI1NS05ZDA2MjI0YzEyYjAiLCJleHAiOjE1MzQxNDUxNzN9.p2x_VCyZXFOM3MLFCa-ncEjEpXbC3tY4rl99RZQX6DA"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/user/b490720d-6a72-4bae-bb55-9d06224c12b0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"b490720d-6a72-4bae-bb55-9d06224c12b0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "74bf94b2-acb9-4b62-93a9-071a99775b02",
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJiNDkwNzIwZC02YTcyLTRiYWUtYmI1NS05ZDA2MjI0YzEyYjAiLCJleHAiOjE1MzQxNDUxNzN9.p2x_VCyZXFOM3MLFCa-ncEjEpXbC3tY4rl99RZQX6DA"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/user/b490720d-6a72-4bae-bb55-9d06224c12b0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"b490720d-6a72-4bae-bb55-9d06224c12b0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
