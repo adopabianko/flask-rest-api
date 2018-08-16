@@ -5,8 +5,10 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import jwt
 import datetime
 from functools import wraps
+from raven.contrib.flask import Sentry
 
 app = Flask(__name__)
+sentry = Sentry(app, dsn='https://4a3e69ff66e040d3aea744105a05349b:ac9989367b0649b6994ea80bde1edc8c@sentry.io/1263246')
 
 app.config['SECRET_KEY'] = 'asdasd'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database/todo.db'
@@ -54,6 +56,8 @@ def get_all_users(current_user):
     users = User.query.all()
 
     output = []
+    sdfaasd = ''
+    sdfdsa = ''
 
     for user in users:
         user_data = {}
