@@ -56,8 +56,6 @@ def get_all_users(current_user):
     users = User.query.all()
 
     output = []
-    sdfaasd = ''
-    sdfdsa = ''
 
     for user in users:
         user_data = {}
